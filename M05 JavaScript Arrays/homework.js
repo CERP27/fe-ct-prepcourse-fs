@@ -106,6 +106,20 @@ function multiplicarArgumentos() {
    // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
+   var resultado=1;
+
+   if(arguments.length===0){return 0;}
+
+   if(arguments.length>=1){
+      for (let i = 0; i < arguments.length; i++) {
+         resultado=resultado*arguments[i];
+         
+      }
+   }
+
+   return resultado;
+   
+   
 }
 
 function cuentoElementos(array) {
@@ -245,6 +259,22 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
+   var array=[];
+   var flag=true;
+   
+   for (let i = 1; i <= 10; i++) {
+      
+         array.push(num+(2*i));
+         if(num+(2*i)===i){
+            flag=false;
+            break;
+         }      
+   }
+   if(flag===false){
+      return "Se interrumpió la ejecución";
+   }else{
+      return array;
+   }   
 }
 
 function continueStatement(num) {
@@ -254,6 +284,16 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+   var array=[]; 
+   var sum=num; 
+   
+   for (let i = 1; i <= 10; i++) {
+      if(i===5){continue;}
+       sum=sum+2
+      array.push(sum);
+   }          
+
+   return array;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
